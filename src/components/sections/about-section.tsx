@@ -37,11 +37,11 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
               }`}
             >
               <h2 className="mb-3 font-sans text-3xl font-light leading-[1.1] tracking-tight text-foreground md:mb-4 md:text-5xl lg:text-6xl">
-                Привет,
+                О нашем
                 <br />
-                я Влада
+                магазине
                 <br />
-                <span className="text-foreground/40">флорист</span>
+                <span className="text-foreground/40">с любовью</span>
               </h2>
             </div>
 
@@ -52,10 +52,10 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
               style={{ transitionDelay: "200ms" }}
             >
               <p className="max-w-md text-sm leading-relaxed text-foreground/80 md:text-base">
-                Я создаю «Кот цветок» с любовью к живым цветам и нашему пушистому логотипу 🐱 Каждый букет — это маленькая история, которую я рассказываю через цветы.
+                «Кот цветок» — это магазин с любовью к живым цветам и нашему пушистому логотипу 🐱 Каждый букет — маленькая история, рассказанная через цветы.
               </p>
               <p className="max-w-md text-sm leading-relaxed text-foreground/80 md:text-base">
-                Работаю в Ижевске, принимаю заказы каждый день. Жду вас в магазине или оформляйте доставку онлайн!
+                Работаем в Ижевске каждый день. Приходите в магазин или оформляйте доставку онлайн!
               </p>
             </div>
 

@@ -7,6 +7,7 @@ const bouquets = [
     category: "Пионы · Розы · Эвкалипт",
     price: "3 500 ₽",
     direction: "left",
+    image: "https://cdn.poehali.dev/projects/6788b6d8-26da-4a47-ad9a-35762458c722/files/37e0d725-5e95-43d2-8772-846dd270a496.jpg",
   },
   {
     number: "02",
@@ -14,6 +15,7 @@ const bouquets = [
     category: "Тюльпаны · Нарциссы · Мимоза",
     price: "2 800 ₽",
     direction: "right",
+    image: "https://cdn.poehali.dev/projects/6788b6d8-26da-4a47-ad9a-35762458c722/files/6559545a-d645-4cc9-80ab-d0ae573d898a.jpg",
   },
   {
     number: "03",
@@ -21,13 +23,15 @@ const bouquets = [
     category: "Лаванда · Ромашки · Сухоцветы",
     price: "4 200 ₽",
     direction: "left",
+    image: "https://cdn.poehali.dev/projects/6788b6d8-26da-4a47-ad9a-35762458c722/files/75a40d21-c87f-41a2-8c66-30a78a5f4688.jpg",
   },
   {
     number: "04",
-    title: "Влада's Choice",
+    title: "Авторский премиум",
     category: "Пионовидные розы · Гортензия",
     price: "5 900 ₽",
     direction: "right",
+    image: "https://cdn.poehali.dev/projects/6788b6d8-26da-4a47-ad9a-35762458c722/files/e6a5a81b-306c-423d-a560-6253a725e42e.jpg",
   },
 ]
 
@@ -66,7 +70,7 @@ function BouquetCard({
   index,
   isVisible,
 }: {
-  bouquet: { number: string; title: string; category: string; price: string; direction: string }
+  bouquet: { number: string; title: string; category: string; price: string; direction: string; image: string }
   index: number
   isVisible: boolean
 }) {
@@ -79,13 +83,17 @@ function BouquetCard({
 
   return (
     <div
-      className={`group flex cursor-pointer items-center justify-between rounded-2xl border border-foreground/10 bg-white/40 px-5 py-4 backdrop-blur-sm transition-all duration-700 hover:border-primary/30 hover:bg-white/70 hover:shadow-md md:px-8 md:py-5 ${getRevealClass()}`}
+      className={`group flex cursor-pointer items-center justify-between rounded-2xl border border-foreground/10 bg-white/40 px-4 py-3 backdrop-blur-sm transition-all duration-700 hover:border-primary/30 hover:bg-white/70 hover:shadow-md md:px-6 md:py-4 ${getRevealClass()}`}
       style={{ transitionDelay: `${index * 100}ms` }}
     >
-      <div className="flex items-center gap-4 md:gap-8">
-        <span className="font-mono text-sm text-foreground/30 transition-colors group-hover:text-primary/60 md:text-base">
-          {bouquet.number}
-        </span>
+      <div className="flex items-center gap-4 md:gap-6">
+        <div className="h-14 w-14 shrink-0 overflow-hidden rounded-xl md:h-16 md:w-16">
+          <img
+            src={bouquet.image}
+            alt={bouquet.title}
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+        </div>
         <div>
           <h3 className="mb-0.5 font-sans text-xl font-light text-foreground transition-transform duration-300 group-hover:translate-x-1 md:text-2xl">
             {bouquet.title}
