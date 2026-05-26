@@ -90,7 +90,7 @@ export function ContactSection() {
                   <Icon name="Clock" className="h-3 w-3 text-foreground/60" />
                   <span className="font-mono text-xs text-foreground/60">Часы работы</span>
                 </div>
-                <p className="text-base text-foreground md:text-xl">Пн–Вс: 9:00 — 21:00</p>
+                <p className="text-base text-foreground md:text-xl">Пн–Вс: 8:00 — 22:00</p>
               </div>
 
               <div
