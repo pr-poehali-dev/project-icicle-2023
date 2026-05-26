@@ -69,7 +69,15 @@ export function ContactSection() {
                   <Icon name="MapPin" className="h-3 w-3 text-foreground/60" />
                   <span className="font-mono text-xs text-foreground/60">Адрес</span>
                 </div>
-                <p className="text-base text-foreground md:text-2xl">Ижевск, пер. Северный, 45</p>
+                <a
+                  href="https://yandex.ru/maps/?text=Ижевск+переулок+Северный+45"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-2 text-base text-foreground transition-colors hover:text-primary md:text-2xl"
+                >
+                  Ижевск, пер. Северный, 45
+                  <Icon name="ExternalLink" className="h-4 w-4 opacity-40 transition-opacity group-hover:opacity-80" />
+                </a>
               </div>
 
               <div
