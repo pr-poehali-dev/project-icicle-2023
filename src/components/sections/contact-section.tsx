@@ -69,7 +69,7 @@ export function ContactSection() {
                   <Icon name="MapPin" className="h-3 w-3 text-foreground/60" />
                   <span className="font-mono text-xs text-foreground/60">Адрес</span>
                 </div>
-                <p className="text-base text-foreground md:text-2xl">Ижевск, ул. Цветочная, 1</p>
+                <p className="text-base text-foreground md:text-2xl">Ижевск, пер. Северный, 45</p>
               </div>
 
               <div
