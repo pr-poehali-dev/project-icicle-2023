@@ -182,32 +182,32 @@ export default function Index() {
       >
         <Shader className="h-full w-full">
           <Swirl
-            colorA="#1275d8"
-            colorB="#e19136"
-            speed={0.8}
-            detail={0.8}
-            blend={50}
-            coarseX={40}
-            coarseY={40}
-            mediumX={40}
-            mediumY={40}
-            fineX={40}
-            fineY={40}
+            colorA="#f4a7b9"
+            colorB="#f9c784"
+            speed={0.5}
+            detail={0.7}
+            blend={60}
+            coarseX={35}
+            coarseY={35}
+            mediumX={35}
+            mediumY={35}
+            fineX={35}
+            fineY={35}
           />
           <ChromaFlow
-            baseColor="#0066ff"
-            upColor="#0066ff"
-            downColor="#d1d1d1"
-            leftColor="#e19136"
-            rightColor="#e19136"
-            intensity={0.9}
+            baseColor="#f4a7b9"
+            upColor="#fce4ec"
+            downColor="#f9c784"
+            leftColor="#e8a598"
+            rightColor="#f7c5d0"
+            intensity={0.7}
             radius={1.8}
-            momentum={25}
+            momentum={20}
             maskType="alpha"
-            opacity={0.97}
+            opacity={0.85}
           />
         </Shader>
-        <div className="absolute inset-0 bg-black/20" />
+        <div className="absolute inset-0 bg-white/10" />
       </div>
 
       <nav
@@ -219,14 +219,14 @@ export default function Index() {
           onClick={() => scrollToSection(0)}
           className="flex items-center gap-2 transition-transform hover:scale-105"
         >
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-foreground/15 backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-foreground/25">
-            <span className="font-sans text-xl font-bold text-foreground">F</span>
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/60 backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-white/80 shadow-sm">
+            <span className="text-xl">🐱</span>
           </div>
-          <span className="font-sans text-xl font-semibold tracking-tight text-foreground">Flowrise</span>
+          <span className="font-sans text-xl font-semibold tracking-tight text-foreground drop-shadow-sm">Кот цветок</span>
         </button>
 
         <div className="hidden items-center gap-8 md:flex">
-          {["Главная", "Работы", "Услуги", "О нас", "Контакты"].map((item, index) => (
+          {["Главная", "Каталог", "Услуги", "О нас", "Заказать"].map((item, index) => (
             <button
               key={item}
               onClick={() => scrollToSection(index)}
@@ -245,7 +245,7 @@ export default function Index() {
         </div>
 
         <MagneticButton variant="secondary" onClick={() => scrollToSection(4)}>
-          Начать
+          Заказать букет
         </MagneticButton>
       </nav>
 
@@ -258,19 +258,29 @@ export default function Index() {
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
         {/* Hero Section */}
-        <section className="flex min-h-screen w-screen shrink-0 flex-col justify-end px-6 pb-16 pt-24 md:px-12 md:pb-24">
-          <div className="max-w-3xl">
-            <div className="mb-4 inline-block animate-in fade-in slide-in-from-bottom-4 rounded-full border border-foreground/20 bg-foreground/15 px-4 py-1.5 backdrop-blur-md duration-700">
-              <p className="font-mono text-xs text-foreground/90">Современные технологии</p>
+        <section className="relative flex min-h-screen w-screen shrink-0 flex-col justify-end px-6 pb-16 pt-24 md:px-12 md:pb-24">
+          {/* Рыжий кот в правом верхнем углу */}
+          <div className="absolute right-0 top-0 h-full w-1/2 pointer-events-none hidden md:block">
+            <img
+              src="https://cdn.poehali.dev/projects/6788b6d8-26da-4a47-ad9a-35762458c722/files/321c369e-5fcf-4021-acbb-67e8b737f4a5.jpg"
+              alt="Рыжий кот выглядывает из цветов"
+              className="h-full w-full object-cover object-center opacity-80"
+              style={{ maskImage: "linear-gradient(to left, rgba(0,0,0,0.9) 30%, rgba(0,0,0,0) 100%)" }}
+            />
+          </div>
+
+          <div className="relative z-10 max-w-2xl">
+            <div className="mb-4 inline-block animate-in fade-in slide-in-from-bottom-4 rounded-full border border-foreground/20 bg-white/50 px-4 py-1.5 backdrop-blur-md duration-700">
+              <p className="font-mono text-xs text-foreground/80">🌸 Цветочный магазин · Ижевск</p>
             </div>
             <h1 className="mb-6 animate-in fade-in slide-in-from-bottom-8 font-sans text-6xl font-light leading-[1.1] tracking-tight text-foreground duration-1000 md:text-7xl lg:text-8xl">
               <span className="text-balance">
-                Цифровое будущее
+                Кот цветок
               </span>
             </h1>
-            <p className="mb-8 max-w-xl animate-in fade-in slide-in-from-bottom-4 text-lg leading-relaxed text-foreground/90 duration-1000 delay-200 md:text-xl">
+            <p className="mb-8 max-w-xl animate-in fade-in slide-in-from-bottom-4 text-lg leading-relaxed text-foreground/80 duration-1000 delay-200 md:text-xl">
               <span className="text-pretty">
-                Создаем современные веб-приложения и цифровые продукты, которые помогают бизнесу расти и развиваться.
+                Свежие букеты с душой — для любого повода. Доставка по Ижевску за 2 часа 🌷
               </span>
             </p>
             <div className="flex animate-in fade-in slide-in-from-bottom-4 flex-col gap-4 duration-1000 delay-300 sm:flex-row sm:items-center">
@@ -279,19 +289,19 @@ export default function Index() {
                 variant="primary"
                 onClick={() => scrollToSection(4)}
               >
-                Обсудить проект
+                Заказать букет
               </MagneticButton>
-              <MagneticButton size="lg" variant="secondary" onClick={() => scrollToSection(2)}>
-                Наши услуги
+              <MagneticButton size="lg" variant="secondary" onClick={() => scrollToSection(1)}>
+                Смотреть каталог
               </MagneticButton>
             </div>
           </div>
 
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-in fade-in duration-1000 delay-500">
             <div className="flex items-center gap-2">
-              <p className="font-mono text-xs text-foreground/80">Листайте вправо</p>
-              <div className="flex h-6 w-12 items-center justify-center rounded-full border border-foreground/20 bg-foreground/15 backdrop-blur-md">
-                <div className="h-2 w-2 animate-pulse rounded-full bg-foreground/80" />
+              <p className="font-mono text-xs text-foreground/70">Листайте вправо</p>
+              <div className="flex h-6 w-12 items-center justify-center rounded-full border border-foreground/30 bg-white/40 backdrop-blur-md">
+                <div className="h-2 w-2 animate-pulse rounded-full bg-primary" />
               </div>
             </div>
           </div>
